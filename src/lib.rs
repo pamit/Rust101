@@ -36,6 +36,18 @@ pub fn with_reference_mut(str: &mut String) {
 pub fn flow_controls() {
     println!("\n\nflow_controls:");
 
+    //// match Result<Ok, Err>
+    match check_size(-1) {
+        Ok(_) => { print!("Yay!\n"); }
+        Err(msg) => { print!("-1: {}\n", msg); }
+    }
+    match check_size(1) {
+        Ok(_) => { print!("1: Yay!\n"); }
+        Err(msg) => { print!("{}\n", msg); }
+    }
+    print!("\n");
+    
+
     let msg: &str; // borrowed string slice
     msg = if true {
         "1"
@@ -74,6 +86,6 @@ pub fn flow_controls() {
     for num in 0..=3 {
         print!("{} ", num);
     }
-    println!("");
+    println!("\n");
 
 }

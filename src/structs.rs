@@ -53,3 +53,17 @@ impl User for Person {
 pub fn is_user_old_enough<T: User>(o: T) {
     println!("User [{}] is old enough: {}", o.name(), o.is_old_enough());
 }
+
+pub fn call() {
+    let ip1 = IPAddress::V4(127, 0, 0, 1);
+    let mut person1 = Person::new(String::from("P"), String::from("M"), 30, ip1);
+    person1.update();
+    person1.print();
+    is_user_old_enough(person1);
+
+    let ip2 = IPAddress::V6(String::from("A0:B1:C2"));
+    let mut person2 = Person::new(String::from("M"), String::from("P"), 10, ip2);
+    person2.fname = String::from("M");
+    person2.print();
+    println!("");
+}
