@@ -49,3 +49,19 @@ impl IPAddress {
         }
     }
 }
+
+//// Tests
+#[cfg(test)]
+mod tests {
+    use crate::collections::find;
+
+    #[test]
+    fn hashmap_should_return_value_by_key() {
+        assert_eq!(find("k1"), "v1");
+    }
+
+    #[test]
+    fn hashmap_should_return_value_by_key_fail() {
+        assert_ne!(find("k1"), "v2");
+    }
+}
