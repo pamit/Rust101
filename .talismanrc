@@ -1,8 +1,4 @@
 fileignoreconfig:
-- filename: Cargo.lock
-  checksum: b33a50d1d9a4846b7c0cd1febe7e6363d71ce4fddf94ca2a4dc792de1988dc0b
-- filename: Cargo.toml
-  checksum: 5bb59f3c210531abcfc7f1e4d54da30244267aa52d3d727001dd14a41723f870
-- filename: src/lib.rs
-  checksum: 1be62c8ae19cf42b8817c1f6749cecc0a98def93f09dae59ac79486c2947b921
+- filename: src/collections.rs
+  checksum: e89aa977da0b7e349e5cbfe87776fcaf8d1ad87ce49fe024e244d063cef19422
 version: ""

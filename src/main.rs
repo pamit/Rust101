@@ -27,8 +27,9 @@ fn main() {
 
     ///// String, &str, mut
     let mut arg: String = std::env::args().nth(1).unwrap_or_else(|| {
-        println!("Please supply an argument to this program.");
-        std::process::exit(-1);
+        // println!("Please supply an argument to this program.");
+        // std::process::exit(-1);
+        return String::from("apple");
     });
 
     lib2::call(&mut arg);
@@ -41,7 +42,7 @@ fn main() {
     //// modules, strings, references
     print!("hello::nonse() called: {}\n", hello::nonse(1, 2.0));
     print!("nonse() called: {}\n", nonse(1, 2.0));
-    print!("hello::find() called: {} - {}\n", hello::find("k1"), find("k2"));
+    print!("hello::find() called: {} - {}\n", collections::find("k1"), collections::find("k2"));
 
     let str3 = String::from("value");
     with_reference(&str3);

@@ -1,19 +1,10 @@
 #![allow(unused_variables, unused_imports)]
 
-use std::collections::HashMap;
 use rand::prelude::*;
 
 pub fn nonse(a: i32, b: f32) -> f32 {
     let mut rng = rand::thread_rng();
     return (a as f32) * b * (rng.gen::<f32>());
-}
-
-pub fn find(key: &str) -> String {
-    let mut books = HashMap::new();
-    books.insert("k1", "v1");
-    books.insert("k2", "v2");
-
-    return books.get(key).unwrap().to_string();
 }
 
 pub fn check_size(size: i32) -> Result<(), String> {
@@ -46,7 +37,7 @@ pub fn flow_controls() {
         Err(msg) => { print!("{}\n", msg); }
     }
     print!("\n");
-    
+
 
     let msg: &str; // borrowed string slice
     msg = if true {

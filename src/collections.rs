@@ -1,6 +1,9 @@
 #![allow(unused_variables, unused_imports)]
 
 use std::vec;
+use std::collections::HashMap;
+
+//// Vector
 
 pub fn create_vector() {
     let mut vector: Vec<i32> = Vec::new();
@@ -12,6 +15,21 @@ pub fn create_vector() {
     let x = vector.pop();
 
     let mut vec2 = vec!['a', 'b'];
+}
+
+//// HashMap
+pub fn find(key: &str) -> String {
+    let mut books = HashMap::new();
+    books.insert("k1", "v1");
+    books.insert("k2", "v2");
+
+    println!("\nHashMap loop => ");
+    for (key, value) in &books {
+        print!("({}: {}) ", key, value);
+    }
+    println!("{:?}", books);
+
+    return books.get(key).unwrap().to_string();
 }
 
 /////////////////////////////////
